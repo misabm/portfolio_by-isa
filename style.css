@@ -1,0 +1,153 @@
+/*GERAIS*/
+
+/* Definindo variáveis para as fontes */
+:root {
+  --fonte-principal: 'Montserrat', sans-serif;
+  --fonte-destaque: 'Silkscreen', cursive;
+}
+/* Para usar diferentes pesos da Montserrat */
+.texto-fino {
+  font-weight: 300;
+}
+
+.texto-normal {
+  font-weight: 400;
+}
+
+.texto-negrito {
+  font-weight: 700;
+}
+
+*{ /*Resetar o documento*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100%;
+  position: relative;
+  background: linear-gradient(180deg, #220E2A 14%, #411348 80%);
+}
+
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+/*ESTILO CABEÇALHO */
+
+header{
+  padding: 40px 4%;
+}
+
+header > .interface{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo{
+  width: 110px; 
+  height: 110px; 
+}
+
+header .logo img{
+  width: 100%;
+  object-fit: contain; /* garante que não corte a imagem */
+}
+
+header a{
+  color: #e0e0e0;
+  font-family: var(--fonte-principal);
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  transition: .2s;
+}
+
+header a:hover{
+  color: #fff;
+  transform: scale(1.05);
+}
+
+header nav ul{
+  list-style-type: none;
+}
+
+header nav ul li{
+  display: inline-block;
+  padding: 0 40px;
+}
+
+header .btn-contato button{
+  padding: 10px 40px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--fonte-principal);
+  color: #fff;
+
+  background: #6F0C97;
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+}
+
+header .btn-contato button:hover{
+  box-shadow: 0px 0px 8px #700c97ab;
+}
+
+/*ESTILO HERO*/
+section.hero{
+  padding: 40 4%;
+  display: flex;
+  align-items: center;
+}
+
+section.hero .flex{
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px; /*Espaço entre a foto e texto*/
+}
+
+.txt-hero{
+  max-width: 500px;
+  color: #fff;
+} 
+
+.txt-hero h1{
+  font-family: var(--fonte-destaque);
+  font-size: 45px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.txt-hero h2{
+  font-family: var(--fonte-principal);
+  font-size: 20px;
+  font-weight: 500px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-left: 15px;
+}
+
+.txt-hero h2 span{
+  color: #9D2EAE;
+  font-weight: 500;
+}
+
+.txt-hero p{
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #fff;
+  margin-left: 25px;
+}
