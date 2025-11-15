@@ -6,6 +6,7 @@
 
   <title>Portfólio - Isadora Matos</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="respon.css">
 
   <!--FONTES-->
   <!--Montserrat-->
@@ -53,9 +54,9 @@
       <div class="interface">
         <div class="flex">
           
-          <div class="foto-hero">
+          <div class="fotos">
             <img src="assets/decor/foto-portfólio.png" alt="isa">
-          </div> <!--foto-hero-->
+          </div> <!--fotos-->
 
           <div class="txt-hero">
             <h1>Hello Word!</h1>
@@ -188,17 +189,36 @@
 
     <section class="formulário" id="Contate-me">
       <div class="interface">
-        
-          <h2 class="titulo2">Contate-me</h2>
+        <div class="flex">
+          
+          <div class="form_inter">
+            <h2 class="titulo2">Contate-me</h2>
 
-          <form action="">
-            <input type="text" name="" id="" placeholder="Insira seu nome" required>
-            <input type="email" name="" id="" placeholder="Insira seu e-mail" required>
-            <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+            <form id="contact-form" action="https://formspree.io/f/xvgdrzyr" method="POST" novalidate>
+              <label for="from_name">Nome</label>
+              <input type="text" name="from_name" id="from_name" placeholder="Insira seu nome" required>
+              
+              <label for="from_email">E-mail</label>
+              <input type="email" name="_replyto" id="from_email" placeholder="Insira seu e-mail" required>
+              
+              <label for="message">Mensagem</label>
+              <textarea name="message" id="message" placeholder="Sua mensagem" required></textarea>
 
-            <div class="btn-enviar"><input type="submit" value="Enviar"></div>
-          </form>
+              <input type="hidden" name="_subject" value="Novo contato do site">
 
+              <div class="btn-enviar">
+                <button type="submit" id="submit-btn">Enviar</button>
+              </div>
+
+              <div class="status" id="form-status" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div> <!--form_inter-->
+
+          <div class="fotos">
+            <img src="assets/decor/código.jpg" alt="isa">
+          </div> <!--fotos-->
+
+        </div> <!--flex-->
       </div> <!--interface-->
     </section> <!--contate-me-->
 
@@ -212,9 +232,9 @@
       </div> <!--logo-footer-->
 
       <div class="btn-social">
-        <a href="#"><button><img src="assets/icons/Frame 9.svg" alt="LinkedIn"></button></a>
-        <a href="#"><button><img src="assets/icons/Frame 10.svg" alt="GitHub"></button></a>
-        <a href="#"><button><img src="assets/icons/Frame 11.svg" alt="Instagram"></button></a>
+        <a href="https://www.linkedin.com/in/isadora-matos-bispo-b10850351/" target="_blank"><button><img src="assets/icons/Frame 9.svg" alt="LinkedIn"></button></a>
+        <a href="https://github.com/misabm" target="_blank"><button><img src="assets/icons/Frame 10.svg" alt="GitHub"></button></a>
+        <a href="https://www.instagram.com/isamatosb_/?igsh=d2xyc2p0amhuZHl3&utm_source=qr#" target="_blank"><button><img src="assets/icons/Frame 11.svg" alt="Instagram"></button></a>
       </div>
     </div> <!--flex-->
 
@@ -225,9 +245,12 @@
       <p><img src="assets/icons/email.svg" alt="Icon de Email"><a href="mailto:mbispoisa@gmail.com">mbispoisa@gmail.com</a></p>
       <p><img src="assets/icons/phone.svg" alt="Icon de Celular">(79) 99932-5991</p>
     </div> <!--linha2-footer-->
+
   </div> <!--interface-->
 </footer>
   
+
+  <script src="script.js"></script>
 
 </body>
 </html>

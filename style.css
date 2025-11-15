@@ -31,7 +31,7 @@ html{
 body{
   height: 100%;
   position: relative;
-  background: linear-gradient(180deg, #220E2A 14%, #411348 80%);
+  background: linear-gradient(180deg, #220E2A 15%, #411348 100%);
 }
 
 .interface{
@@ -41,6 +41,32 @@ body{
 
 .flex{
   display: flex;
+}
+
+.fotos img{
+  border-radius: 320px;
+  background: transparent;
+  box-shadow: 
+    0 0 20px #9D2EAE,            
+    0 0 40px rgba(157,46,174,0.6),
+    0 0 80px rgba(157,46,174,0.25); 
+  }
+
+
+.fotos img{
+  width: 320px;
+  position: relative;
+  animation: flutuar 1s ease-in-out infinite alternate;
+}
+
+/*animação da foto*/
+@keyframes flutuar{
+  0%{
+    top: 0px;
+  }
+  100%{
+    top: 20px;
+  }
 }
 
 h2.titulo2{
@@ -131,32 +157,6 @@ section.hero .flex{
   justify-content: space-between;
   width: 100%;
   gap: 80px; /*Espaço entre a foto e texto*/
-}
-
-.foto-hero img{
-  border-radius: 320px;
-  background: transparent;
-  box-shadow: 
-    0 0 20px #9D2EAE,            
-    0 0 40px rgba(157,46,174,0.6),
-    0 0 80px rgba(157,46,174,0.25); 
-  }
-
-
-.hero .foto-hero img{
-  width: 320px;
-  position: relative;
-  animation: flutuar 1s ease-in-out infinite alternate;
-}
-
-/*animação da foto*/
-@keyframes flutuar{
-  0%{
-    top: 0px;
-  }
-  100%{
-    top: 20px;
-  }
 }
 
 .txt-hero{
@@ -301,7 +301,16 @@ section.projetos{
 /*ESTILO CONTATE-ME*/
 
 section.formulário{
-  padding: 80px 4%;
+  padding: 40px 4%;
+  display: flex;
+  align-items: center;
+}
+
+section.formulário .flex{
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 100px; /*Espaço entre a foto e texto*/
 }
 
 section.formulário h2{
@@ -309,12 +318,18 @@ section.formulário h2{
 }
 
 form{
-  max-width: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin: auto;
   justify-content: center;
+}
+
+label{
+  color: #fff;
+  font-family: var(--fonte-principal);
+  font-size: 14px;
 }
 
 form input[type="text"],
@@ -342,7 +357,7 @@ form .btn-enviar{
   margin-top: 10px;
 }
 
-.btn-enviar input[type="submit"]{
+.btn-enviar button[type="submit"]{
   padding: 10px 40px;
   font-size: 15px;
   font-weight: 600;
@@ -356,8 +371,15 @@ form .btn-enviar{
   cursor: pointer;
 }
 
-.btn-enviar input[type="submit"]:hover{
+.btn-enviar button[type="submit"]:hover{
   box-shadow: 0px 0px 8px #700c97ab;
+}
+
+.status{
+  color: #e0e0e0;
+  font-family: var(--fonte-principal);
+  font-weight: 500;
+  text-align: center;
 }
 
 /* ESTILO DO RODAPÉ */
