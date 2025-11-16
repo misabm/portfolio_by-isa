@@ -29,19 +29,19 @@ document.addEventListener('DOMContentLoaded', () => { // Espera a página carreg
         headers: { 'Accept': 'application/json' }
       });
 
-      if (res.ok) {
-        status.textContent = 'Mensagem enviada com sucesso!';
-        form.reset();
+      if (res.ok) { // Se a resposta do servidor for positiva
+        status.textContent = 'Mensagem enviada com sucesso!'; // Informa o sucesso ao usuário
+        form.reset(); // Limpa os campos do formulário
       } else {
         // tenta ler mensagem de erro do servidor
-        const json = await res.json().catch(() => null);
-        status.textContent = json && json.error ? `Erro: ${json.error}` : 'Erro ao enviar. Tente novamente mais tarde.';
+        const json = await res.json().catch(() => null); // Tenta transformar a resposta em JSON; se falhar, usa null
+        status.textContent = json && json.error ? `Erro: ${json.error}` : 'Erro ao enviar. Tente novamente mais tarde.'; // Mostra erro detalhado se houver, senão genérico
       }
     } catch (err) {
       status.textContent = 'Erro de rede. Verifique sua conexão e tente novamente.';
     } finally {
-      btn.disabled = false;
-      btn.textContent = originalText;
+      btn.disabled = false; // Reabilita o botão de enviar
+      btn.textContent = originalText; // Restaura o texto original do botão
       // esconde a mensagem após 5s
       setTimeout(() => { status.hidden = true; status.textContent = ''; }, 5000);
     }
