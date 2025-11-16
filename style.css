@@ -43,7 +43,7 @@ body{
   display: flex;
 }
 
-.fotos img{
+.fotoport img{
   border-radius: 320px;
   background: transparent;
   box-shadow: 
@@ -53,7 +53,7 @@ body{
   }
 
 
-.fotos img{
+.fotoport img{
   width: 320px;
   position: relative;
   animation: flutuar 1s ease-in-out infinite alternate;
@@ -131,18 +131,22 @@ header a{
   transition: .2s;
 }
 
-header a:hover{
+header nav.menu-desktop a:hover{
   color: #fff;
   transform: scale(1.05);
 }
 
-header nav ul{
+header nav.menu-desktop ul{
   list-style-type: none;
 }
 
 header nav ul li{
   display: inline-block;
   padding: 0 40px;
+}
+
+.btn-abrir-menu{
+  display: none;
 }
 
 /*ESTILO HERO*/
@@ -298,7 +302,39 @@ section.projetos{
   width: 100%;
 }
 
+.btn-info button{
+  padding: 10px 40px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--fonte-principal);
+  color: #fff;
+
+  background: #6F0C97;
+  border: none;
+  border-radius: 30px;
+
+  cursor: pointer;
+}
+
+.btn-info button:hover{
+  box-shadow: 0px 0px 8px #700c97ab;
+}
+
 /*ESTILO CONTATE-ME*/
+.fotocode img{
+  border-radius: 320px;
+  background: transparent;
+  box-shadow: 
+    0 0 20px #9D2EAE,            
+    0 0 40px rgba(157,46,174,0.6),
+    0 0 80px rgba(157,46,174,0.25); 
+  }
+
+
+.fotocode img{
+  width: 320px;
+  position: relative;
+}
 
 section.formulário{
   padding: 40px 4%;

@@ -1,0 +1,129 @@
+@media screen and (max-width: 1020px){ /*ATENÇÃO A ISSO AQUI*/
+  
+  /*GERAIS*/
+  .flex{
+    flex-direction: column;
+  }
+
+  /*CABEÇALHO*/
+  .menu-desktop, .btn-contato{
+    display: none;
+  }
+
+  .btn-abrir-menu{
+    display: block;
+  }
+
+  /*HERO*/
+  .bolinhas{
+    display: none;
+  }
+
+  /*STACKS*/
+  .tt2 img{
+    display: none;
+  }
+
+  .stacks .flex .stacks-icons{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /*CONTATE-ME*/
+  .form_inter{
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  form{
+    width: 100%;
+    gap: 10px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    padding: 10px; /* Ajusta o padding para melhor usabilidade em telas menores */
+  }
+  
+  .fotocode{
+    display: none;
+  }
+
+  /*RODAPÉ*/
+  .logo-footer{
+    display: none;
+  }
+
+}
+
+/*ESTILO DO MENU MOBILE*/
+.btn-abrir-menu img{
+  width: 35px;
+}
+
+.menu-mobile{
+  background-color: #240431;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 0%;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu-mobile nav ul{
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-mobile nav ul li{
+  width: 100%;
+}
+
+.menu-mobile nav ul li a{
+  color: #fff;
+  font-size: 23px;
+  font-weight: 500;
+  padding: 20px 0;
+  display: block;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+}
+
+.menu-mobile nav ul li a:hover{
+  background-color: #9D2EAE;
+  color: #240431;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.menu-mobile .btn-fechar img{
+  width: 30px;
+}
+
+.menu-mobile .btn-fechar{
+  padding: 20px 5%;
+}
+
+.overlay-menu{
+  background-color: #00000091;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8888;
+  display: none;
+}
+
+.menu-mobile.abrir-menu{
+  width: 60%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+}
